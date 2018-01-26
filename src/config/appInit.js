@@ -31,8 +31,14 @@ class AppInit extends Component {
     constructor (props) {
         super(props)
         this.state = {
-            loginStatus:true
+            loginStatus:false
         }
+    }
+
+    login = () => {
+        this.setState({
+            loginStatus:true
+        })
     }
 
 
@@ -43,7 +49,9 @@ class AppInit extends Component {
     render () {
             return  this.state.loginStatus?
                 <AppNavigation/>
-                :<PersonalLogin />
+                :
+                <PersonalLogin
+                loginin={this.login}/>
     }
 }
 
