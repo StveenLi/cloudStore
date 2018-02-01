@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {View, Text, StyleSheet, Modal, TextInput, TouchableOpacity,Button,ActivityIndicator} from 'react-native'
+import {View, Text, StyleSheet, Modal, CheckBox, TouchableOpacity,Button,ActivityIndicator} from 'react-native'
 
 
 
@@ -22,11 +22,7 @@ class ListItem extends Component {
         const { navigate } = this.props.navigation;
 
         return <View>
-                        <ActivityIndicator
-                            animating={this.state.animating}
-                            style={[styles.centering, {height: 80}]}
-                            size="large"
-                        />
+                        <CheckBox></CheckBox>
                 </View>
 
     }
